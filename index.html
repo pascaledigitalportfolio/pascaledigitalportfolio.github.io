@@ -1,1 +1,197 @@
-# pascaledigitalportfolio.github.io
+<DOCTYPE html>
+<html>
+    <body style="background-color: lightblue">
+        <style>
+
+        #first {
+            font-family: monospace;
+                font-weight:bold;
+                font-size: 25px;
+        }
+            h2 {
+            color: darkcyan;
+            text-decoration:underline;
+            text-align: center;
+        }
+            h3 {
+                color:darkcyan;
+                text-align: center;
+            }
+            h1 {
+                color: lightcoral;
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 45px;
+                text-align: center;
+                border: dashed;
+                margin: 13px;
+                padding: 2px;
+            }
+            h4 {
+                font-family: monospace;
+                text-align: center;
+            }
+            #second {
+                font-family: monospace;
+                font-size: 19px;
+                color: lightcoral;
+                text-align: center;
+            }
+            .gold-frame {
+                border:7px solid gold;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 2px;
+                width:50%;
+            }
+            a {
+                margin-left: 650px;
+            
+            }
+        
+            
+        </style>
+    <h1> PASCALE'S SCHOOL PORTFOLIO </h1>
+    <h2 id="first"> WhiteBox Learning Project </h2>
+    <p id="second"> Using the WhiteBox Learning website, we worked with and tested our prosthetic arms and simulated a virtual prosthetic arm. We were then given a target to reach by throwing a ball from the prosthetic arm. We then had a competition on the website to see which student could get the closest to the target. After we competed, it was time for us to build our own prosthetic arms using balsa wood. Once our prosthetics were built, we competed by using a bucket as our target and tried to get a ping pong into the bucket using our prosthetic arms. </p>
+        
+    <h3 id="first"> Here's a link to the WhiteBox Learning Project! </h3>
+        
+    <a target="_blank" href="https://whiteboxlearning.com">WhiteBox Learning</a>
+    <br>
+    <br>
+    <img class="gold-frame" style="width:400px;height;400px" src="images/prosthetics.jpg">
+    <br>
+    <br>
+    <img class="gold-frame" style="width:400px;height;400px" src="images/IMG_1592.JPG">
+        
+    <h2 id="first"> 3D Modeling and Printing project </h2>
+    <p id="second"> Using the SketchUp program (3D Modeling program), we experimented with inventing gadgets to help us in our every day lives. These included: phone holders, chopstick holders, banana cutters, and many more fun inventions. We used SketchUp to bring our innovations to life and 3D printed them to put to use!</p>
+        
+    <h3 id="first"> Here's a link to the SketchUp Website</h3>
+        
+    <a target="_blank" href="https://sketchup.com">Sketchup</a>
+    <br>
+    <br>
+    <img class="gold-frame" style="width:400px;height;400px" src="images/Screen%20Shot%202019-06-05%20at%202.37.03%20PM.PNG">
+    <br>
+    <img class="gold-frame" style="width:400px;height;400px" src="images/IMG_2263.JPG">
+    <br>
+    <h2 id="first"> VEX Project </h2>
+    <p id="second">The VEX Project we took part in involved building VEX Robots by ourselves in small groups, coded our robots, and partook in a competition to see which robot could home itself, get the most balls to the other side of the playing field, and keep all of its parts in place. The VEX Project was personally one of my favorite projects we did in tech this year because it was very interactive and allowed me to learn so much about coding, engineering, and teamwork.</p>
+        
+    <h3 id="first"> Here's a link to the VEX Website</h3>
+        
+    <a target="_blank" href="https://vexrobotics.com">VEX Robotics</a>
+    <br>
+    <br>
+    <h3 id="first"> Here's some of my code!</h3>
+    <p id="second"> 
+        #pragma config(Sensor,dgtl3,sensor2,sensorTouch)<br>
+#pragma config(Motor,port1,motor1,tmotorVex393_HBridge,openLoop)<br>
+#pragma config(Motor,port6,clawmotor,tmotorVex393_MC29,openLoop)<br>
+#pragma config(Motor,port7,armmotor,tmotorVex393_MC29,openLoop)<br>
+#pragma config(Motor,port10,motor2,tmotorVex393_HBridge,openLoop)<br>
+<br>
+task main()<br>
+{<br>
+while(true)<br>
+{<br>
+<br>
+	
+  motor[port1] = vexRT[Ch3];<br>
+  motor[port10] = vexRT[Ch2]; <br>
+        <br>
+
+  if(vexRT[Btn5U] == 1)<br>    
+  {<br>
+    motor[port6] = 32;<br>          
+  }<br>
+  else if(vexRT[Btn5D] == 1)<br>
+  {<br>
+    motor[port6] = -32;<br>
+  }<br>
+  else<br>                       
+  {<br>
+    motor[port6] = 0;}<br>
+    if(vexRT[Btn6U] == 1)<br>      
+  {<br>
+    motor[port7] = 32;  <br>       
+  }<br>
+  else if(vexRT[Btn6D] == 1)<br> 
+  {<br>
+    motor[port7] = -32;<br>        
+  }<br>
+  else<br>                       
+  {<br>
+    motor[port7] = 0;<br>
+  }<br>
+<br>
+if(vexRT[Btn7U] == 1) <br> 
+{<br>
+	motor[port6] = 32;<br>
+	delay(3000);<br>
+	motor[port1] = 32;<br>
+	motor[port10] = 32;<br>
+	delay(1000);<br>
+	motor[port1] = 0;<br>
+	motor[port10] = 0;<br>
+  motor[port6] = -32;<br>
+  delay(1000);<br>
+  motor[port7] = -32;<br>
+  delay(700);<br>
+}<br>
+  if(vexRT[Btn8U] == 1)<br>
+  {<br>
+  	motor[port7] = -32;<br>
+  	delay(1500);<br>
+  	motor[port7] = 0;<br>
+  	motor[port1] = -100;<br>
+  	motor[port10] = 100;<br>
+  	delay(650);<br>
+<br>
+  	while(SensorValue(sensor2) == 0)<br>
+  	{<br>
+  	motor[port1] = 56;<br>
+  	motor[port10] = 56;<br>
+}<br>
+<br>
+ if(SensorValue(sensor2) == 1)<br>
+  {<br>
+  	motor[port1] = 0;<br>
+  	motor[port10] = 0;<br>
+  	delay(1000);<br>
+  	motor[port1] = -32;<br>
+  	motor[port10] = -32;<br>
+  	delay(1000);<br>
+  	motor[port1] = -100;<br>
+  	motor[port10] = 100;<br>
+		delay(650);<br>
+	}<br>
+        while(SensorValue(sensor2) == 0)<br>
+  	{<br>
+  	motor[port1] = 56;<br>
+  	motor[port10] = 56;<br>
+<br>
+  }<br>
+  if(SensorValue(sensor2) == 1)<br>
+  {<br>
+  	motor[port1] = 0;<br>
+  	motor[port10] = 0;<br>
+<br>
+}}}}<br>
+        <br>
+        <br>
+</p>
+    <img class="gold-frame" style="width:400px;height;400px" src="images/IMG_1983.JPG">
+        <br>
+        <br>
+        <img class="gold-frame" style="width:400px;height;400px" src="images/IMG_2124.JPG">
+    
+        <h2 id="first"> Website Design Project </h2>
+        <p id="second">In order to design our websites, we coded in Brackets and used HTML and CSS to code and design our websites to present a portfolio of the projects we partook in this year. HTML was used to include text, images, and links into our webpages, and CSS was used to style and decorate our website as a whole. We used Khan Academy and StudioWeb to learn about the basics of HTML and CSS before we got started on our individual projects. This was the last project of the year, and once we were done we published our websites using Github.</p>
+        
+        <h3 id="first"> Here's some of the HTML and CSS that was included in the making of this website. </h3>
+        
+        <img class="gold-frame" style="width:400px;height;400px" src="images/Screen%20Shot%202019-06-07%20at%202.43.23%20PM.png">
